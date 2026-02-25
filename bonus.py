@@ -1,7 +1,7 @@
 #get salary, has to be positive, more than 0, numeric (can be float)
 while True:
     try:
-        sal=float(input("Input your monthly salary: "))
+        sal=round(float(input("Input your monthly salary: ")), 2)
         if sal <= 0:
             print("Salary must be a positive number.")
         else:
@@ -13,11 +13,11 @@ while True:
     try:
         yrs=int(input("Input your years of service: "))
         if yrs < 0:
-            print("Years of service cannot be negative.")
+            print("Years of service cant be negative.")
         else:
             break
     except ValueError:
-        print("Please enter a valid integer for years of service.")
+        print("Please enter a valid number and only full years of service.")
 # if service over 2 years, for every year 15% bonus
 if yrs > 2:
     yrs_overtwo = yrs - 2
